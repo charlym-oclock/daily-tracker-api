@@ -89,7 +89,7 @@ INSERT INTO "task" ("id", "title", "owner_id") VALUES
 (48, 'Dream of chasing mice', 2);
 
 -- 6. Seed Day Models
-INSERT INTO "day_model" ("id", "name", "owner_id") VALUES 
+INSERT INTO "day_model" ("id", "name", "user_id") VALUES 
 (1, 'Weekday', 1),
 (2, 'Weekend', 1),
 (3, 'Daily', 2),
