@@ -17,4 +17,4 @@ try {
   logger.error('Error trying to connect to Database', error);
 }
 
-module.export = client;
+module.exports = client;

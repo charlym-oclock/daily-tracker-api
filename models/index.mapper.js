@@ -6,7 +6,7 @@ const User = require('./user.mapper');
 const Task = require('./task.mapper');
 const Calendar = require('./calendar.mapper');
 const DayTask = require('./day.task.mapper');
-const DayModel = require('./dayModel.mapper');
+const DayModel = require('./model.mapper');
 const CoreDatamapper = require('./core.mapper');
 
 module.exports = {
