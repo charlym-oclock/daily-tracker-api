@@ -1,11 +1,10 @@
 const CoreDatamapper = require('./core.mapper');
 const CalendarMapper = require('./calendar.mapper');
 
-module.exports = class DayMapper extends CoreDatamapper {
+module.exports = class DayTaskMapper extends CoreDatamapper {
   calendarMapper = new CalendarMapper();
 
   // Operations on DAY_TASK table
-
   async assignTaskToDay(date, taskId, userId, hour) {
     // Ensure day exists in the 'day' table or create it
     const day = await this.calendarMapper.getDayByDate(date);
