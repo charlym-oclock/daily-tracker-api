@@ -48,7 +48,7 @@ CREATE TABLE "task" (
 CREATE TABLE "day_model" (
   "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(64) NOT NULL UNIQUE,
-  "owner_id" INT REFERENCES "user" ("id"),
+  "user_id" INT REFERENCES "user" ("id"),
   "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   "updated_at" TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -71,6 +71,7 @@ CREATE TABLE "user_day" (
 CREATE TABLE "day_task" (
   "date" DATE REFERENCES "day" ("date"),
   "task_id" INT REFERENCES "task" ("id"),
+  "user_id" INT REFERENCES "user" ("id"),
   "hour" TIME,
   "is_done" BOOLEAN NOT NULL DEFAULT FALSE,
   "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
