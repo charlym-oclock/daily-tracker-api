@@ -5,6 +5,7 @@ class TaskController {
   async createTask(req, res, next) {
     try {
       const taskData = req.body;
+      //TODO add data validation
       const newTask = await TaskMapper.createTask(taskData);
       res.status(201).json(newTask); 
     } catch (error) {
