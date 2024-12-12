@@ -4,10 +4,11 @@ BEGIN;
 INSERT INTO "year" ("year") VALUES (2023);
 
 -- 2. Seed Weeks
-INSERT INTO "week" ("id", "week_num", "year") VALUES 
-(1, 31, 2023),
-(2, 32, 2023),
-(3, 33, 2023);
+-- 2. Seed Weeks
+INSERT INTO "week" ("week_num", "year") VALUES 
+(31, 2023),
+(32, 2023),
+(33, 2023);
 
 -- 3. Seed Days
 INSERT INTO "day" ("date", "week_id") VALUES 
@@ -31,69 +32,69 @@ INSERT INTO "day" ("date", "week_id") VALUES
 ('17/08/2023', 3);
 
 -- 4. Seed Users
-INSERT INTO "user" ("id", "username", "email", "password") VALUES 
-(1, 'Charly', 'charly@local.com', 'password123'),
-(2, 'Pipouille', 'pipouille@local.com', 'password123');
+INSERT INTO "user" ("username", "email", "password") VALUES 
+('Charly', 'charly@local.com', 'password123'),
+('Pipouille', 'pipouille@local.com', 'password123');
 
 -- 5. Seed Tasks
-INSERT INTO "task" ("id", "title", "owner_id") VALUES 
+INSERT INTO "task" ("title", "owner_id") VALUES 
 -- Charly's tasks
-(1, 'Empty the dishwasher', 1),
-(2, 'Wake up at 7am', 1),
-(3, 'Water the plants', 1),
-(4, 'Read for 30 minutes', 1),
-(5, 'Go for a morning walk', 1),
-(6, 'Make the bed', 1),
-(7, 'Prepare breakfast', 1),
-(8, 'Respond to emails', 1),
-(9, 'Attend morning meetings', 1),
-(10, 'Work on the project', 1),
-(11, 'Take a short break', 1),
-(12, 'Prepare lunch', 1),
-(13, 'Meditate for 15 minutes', 1),
-(14, 'Call a friend or family', 1),
-(15, 'Do 20 minutes of exercise', 1),
-(16, 'Take out the trash', 1),
-(17, 'Pick up groceries', 1),
-(18, 'Cook dinner', 1),
-(19, 'Watch a TV show', 1),
-(20, 'Write in the journal', 1),
-(21, 'Listen to music or podcast', 1),
-(22, 'Plan for the next day', 1),
-(23, 'Brush teeth and skincare routine', 1),
-(24, 'Go to bed by 11pm', 1),
+('Empty the dishwasher', 1),
+('Wake up at 7am', 1),
+('Water the plants', 1),
+('Read for 30 minutes', 1),
+('Go for a morning walk', 1),
+('Make the bed', 1),
+('Prepare breakfast', 1),
+('Respond to emails', 1),
+('Attend morning meetings', 1),
+('Work on the project', 1),
+('Take a short break', 1),
+('Prepare lunch', 1),
+('Meditate for 15 minutes', 1),
+('Call a friend or family', 1),
+('Do 20 minutes of exercise', 1),
+('Take out the trash', 1),
+('Pick up groceries', 1),
+('Cook dinner', 1),
+('Watch a TV show', 1),
+('Write in the journal', 1),
+('Listen to music or podcast', 1),
+('Plan for the next day', 1),
+('Brush teeth and skincare routine', 1),
+('Go to bed by 11pm', 1),
 -- Pipouille's tasks
-(25, 'Nap in the sunbeam', 2),
-(26, 'Knock a vase off the table', 2),
-(27, 'Watch birds from the window', 2),
-(28, 'Play with a yarn ball', 2),
-(29, 'Hide in a cardboard box', 2),
-(30, 'Purr loudly while getting petted', 2),
-(31, 'Try to catch the red dot (laser pointer)', 2),
-(32, 'Eat some catnip', 2),
-(33, 'Stretch and do some kitty yoga', 2),
-(34, 'Demand treats', 2),
-(35, 'Scratch the furniture', 2),
-(36, 'Drink water from the tap', 2),
-(37, 'Climb to the highest point in the room', 2),
-(38, 'Chase own tail', 2),
-(39, 'Stare at a wall for no apparent reason', 2),
-(40, 'Bring a toy to the human', 2),
-(41, 'Groom meticulously', 2),
-(42, 'Inspect a new bag or box', 2),
-(43, 'Listen intently to mysterious sounds', 2),
-(44, 'Sleep in the laundry basket', 2),
-(45, 'Sit on the computer keyboard', 2),
-(46, 'Stalk a bug', 2),
-(47, 'Give the human a disdainful look', 2),
-(48, 'Dream of chasing mice', 2);
+('Nap in the sunbeam', 2),
+('Knock a vase off the table', 2),
+('Watch birds from the window', 2),
+('Play with a yarn ball', 2),
+('Hide in a cardboard box', 2),
+('Purr loudly while getting petted', 2),
+('Try to catch the red dot (laser pointer)', 2),
+('Eat some catnip', 2),
+('Stretch and do some kitty yoga', 2),
+('Demand treats', 2),
+('Scratch the furniture', 2),
+('Drink water from the tap', 2),
+('Climb to the highest point in the room', 2),
+('Chase own tail', 2),
+('Stare at a wall for no apparent reason', 2),
+('Bring a toy to the human', 2),
+('Groom meticulously', 2),
+('Inspect a new bag or box', 2),
+('Listen intently to mysterious sounds', 2),
+('Sleep in the laundry basket', 2),
+('Sit on the computer keyboard', 2),
+('Stalk a bug', 2),
+('Give the human a disdainful look', 2),
+('Dream of chasing mice', 2);
 
 -- 6. Seed Day Models
-INSERT INTO "day_model" ("id", "name", "user_id") VALUES 
-(1, 'Weekday', 1),
-(2, 'Weekend', 1),
-(3, 'Daily', 2),
-(4, 'On vacation', 2);
+INSERT INTO "day_model" ("name", "user_id") VALUES 
+('Weekday', 1),
+('Weekend', 1),
+('Daily', 2),
+('On vacation', 2);
 
 -- 7. Seed Day Model Tasks for Charly's models
 INSERT INTO "day_model_task" ("day_model_id", "task_id") VALUES 
