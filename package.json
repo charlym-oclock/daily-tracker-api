@@ -1,4 +1,17 @@
 {
+  "name": "daily-tracker-api",
+  "version": "1.0.0",
+  "description": "API Daily Tracker",
+  "keywords": [
+    "daily tracker",
+    "gestion du temps",
+    "todo list"
+  ],
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "luinilbleue@gmail.com",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.3.1",
